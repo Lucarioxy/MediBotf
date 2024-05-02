@@ -80,6 +80,7 @@ li {
 .page {
     height: 90dvh;
     aspect-ratio: 9 / 17;
+    max-width: 95dvw;
     margin: auto 0;
     border-radius: 3rem;
     outline: solid black 0.5rem;
@@ -305,11 +306,6 @@ button.no-display {
 .send-logo-wrapper img {
     height: var(--fs-200);
 }
-
-.user-logo {
-    position: relative;
-}
-
 .user-logo input[type="checkbox"] {
     display: none;
 }
@@ -328,7 +324,10 @@ button.no-display {
     animation-name: optionsList;
     animation-duration: 0.1s;
     animation-timing-function: linear;
-    transform: translateX(-90%) translateY(40%);
+    /* transform: translateX(-90%) translateY(40%); */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 4rem;
     font-size: var(--fs-400);
     width: 32rem;
@@ -337,9 +336,13 @@ button.no-display {
 
 @keyframes optionsList {
     from {
-        transform: translateY(40%);
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
     } to {
-        transform: translateX(-90%) translateY(40%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 
