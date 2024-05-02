@@ -1,0 +1,17 @@
+.start-recording * {
+    cursor: pointer;
+}
+
+.upload-wrapper {
+    width: 100%;
+    padding: 0.2rem 0.5rem;
+}
+
+.upload-wrapper label {
+    background-color: var(--primary);
+    display: inline-block;
+    padding: 2px 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 3px;
+}

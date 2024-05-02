@@ -1,0 +1,84 @@
+:root {
+    --fs-50: 1.4rem;
+    --fs-100: 1.6rem;
+    --fs-200: 2.0rem;
+    --fs-300: 2.2rem;
+    --fs-400: 2.6rem;
+    --fs-500: 3.2rem;
+    --fs-600: 3.6rem;
+    --fs-700: 4.0rem;
+    --fs-800: 5.2rem;
+    --fs-900: 6.4rem;
+    
+    --bg-primary: #fff0f0;
+    --bg-secondary: #fffbe5;
+
+    --primary: #ff7070;
+    --primary-700: #723636;
+    --primary-500: #964a4a;
+    --primary-300: #fcbfbf;
+    
+    --secondary: #fff06c;
+    --secondary-700: #7b732d;
+    --secondary-500: #70753c;
+    --secondary-300: #b1a645;
+}
+
+.recording-overlay {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary-500);
+    color: var(--bg-primary);
+    font-size: var(--fs-400);
+    gap: 4rem;
+    z-index: 1;
+}
+
+.recording-buttons {
+    gap: 1rem;
+}
+
+.recording-button {
+    display: inline-block;
+    background-color: var(--primary-300);
+}
+
+.transcription-wrapper {
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.transcription {
+    height: 20ch;
+    width: 80%;
+    background-color: var(--primary-300);
+    color: var(--primary-700);
+    padding: 1rem 2rem;
+    font-size: var(--fs-200);
+    border-radius: 1rem;
+}
+
+.transcription-wrapper > button {
+    font-size: var(--fs-200);
+    background-color: var(--primary);
+    display: block;
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+}
+
+#close-button {
+    position: fixed;
+    transform: translateX(-20rem) translateY(-41rem) scale(150%);
+}
+
+.upload-documents input[type="file"] {
+    display: none;
+}
+  
+.upload-documents label {
+    display: inline-block;
+    cursor: pointer;
+}

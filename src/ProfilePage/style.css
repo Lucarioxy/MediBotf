@@ -1,0 +1,70 @@
+:root {
+    --fs-50: 1.4rem;
+    --fs-100: 1.6rem;
+    --fs-200: 2.0rem;
+    --fs-300: 2.2rem;
+    --fs-400: 2.6rem;
+    --fs-500: 3.2rem;
+    --fs-600: 3.6rem;
+    --fs-700: 4.0rem;
+    --fs-800: 5.2rem;
+    --fs-900: 6.4rem;
+    
+    --bg-primary: #fff0f0;
+    --bg-secondary: #fffbe5;
+
+    --primary: #ff7070;
+    --primary-700: #723636;
+    --primary-500: #964a4a;
+    --primary-300: #fcbfbf;
+    
+    --secondary: #fff06c;
+    --secondary-700: #4c4820;
+    --secondary-500: #70753c;
+    --secondary-300: #b1a645;
+}
+
+.dash-board {
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.profile-subsection {
+    padding: 1rem 2rem;
+    outline: solid 3px var(--secondary-700);
+    background-color: rgba(3, 3, 3, 0.05);
+    border-radius: 2rem;
+    gap: 1rem;
+}
+
+.profile-subsection-title {
+    display: inline-block;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.8rem;
+    margin-right: auto;
+    background-color: var(--secondary-500);
+    color: var(--bg-secondary);
+    font-size: var(--fs-300);
+}
+
+.profile-name {
+    font-size: var(--fs-700);
+    color: var(--secondary-700);
+    text-wrap: wrap;
+}
+
+.profile-title {
+    font-size: var(--fs-400);
+    color: var(--secondary-700);
+    text-wrap: wrap;
+}
+
+#summary-text {
+    font-size: var(--fs-200);
+    max-height: 42rem;
+    overflow-y: scroll;
+}
+
+#summary-text li {
+    list-style: disc;
+}

@@ -1,0 +1,417 @@
+*, *::after, *::before {
+    font-size: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --fs-50: 1.4rem;
+    --fs-100: 1.6rem;
+    --fs-200: 2.0rem;
+    --fs-300: 2.2rem;
+    --fs-400: 2.6rem;
+    --fs-500: 3.2rem;
+    --fs-600: 3.6rem;
+    --fs-700: 4.0rem;
+    --fs-800: 5.2rem;
+    --fs-900: 6.4rem;
+    
+    --bg-primary: #fff0f0;
+    --bg-secondary: #fffbe5;
+
+    --primary: #ff7070;
+    --primary-700: #723636;
+    --primary-500: #964a4a;
+    --primary-300: #fcbfbf;
+    
+    --secondary: #fff06c;
+    --secondary-700: #7b732d;
+    --secondary-500: #70753c;
+    --secondary-300: #b1a645;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+img {
+    display: block;
+    font-style: italic;
+}
+
+li {
+    list-style: none;
+}
+
+.login-page option, .login-page input {
+    border-radius: 0.8rem;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    height: 0.5rem;
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 9999px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0, 0%, 13%, 0.374);
+    border-color: rgba(255,255,255, var(--tw-border-opacity));
+    border-radius: 9999px;
+    border-width: 0.2rem;
+}
+
+.page {
+    height: 90dvh;
+    aspect-ratio: 9 / 17;
+    margin: auto 0;
+    border-radius: 3rem;
+    outline: solid black 0.5rem;
+    padding: 2rem 3rem;
+    gap: 2rem;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.page > .blur-overlay {
+    content: '';
+    height: 100%;
+    width: 100%;
+    inset: 0;
+    border-radius: inherit;
+    background-color: rgba(96, 74, 74, 0.5);
+    filter: blur(10px);
+    z-index: 1;
+    position: absolute;
+    
+    transition: opacity 0.1s ease-in, display 0s linear 0.1s;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button.no-display {
+    all: unset;
+    cursor: pointer;
+}
+
+.title-txt {
+    font-size: var(--fs-400);
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.chat-page {
+    background-color: var(--bg-primary);
+}
+
+.profile-page {
+    background: hsla(54, 100%, 71%, 1);
+    background: linear-gradient(270deg, hsla(54, 100%, 71%, 1) 0%, hsla(51, 100%, 95%, 1) 18%);
+    background: -moz-linear-gradient(270deg, hsla(54, 100%, 71%, 1) 0%, hsla(51, 100%, 95%, 1) 18%);
+    background: -webkit-linear-gradient(270deg, hsla(54, 100%, 71%, 1) 0%, hsla(51, 100%, 95%, 1) 18%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFF06C", endColorstr="#FFFBE5", GradientType=1 );
+}
+
+.profile-page > button {
+    border-radius: 50%;
+    outline: solid 3px black;
+}
+
+.profile-page > button > img {
+    height: 3rem;
+    aspect-ratio: 1;
+}
+
+.login-page {
+    font-size: var(--fs-200);
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flex-col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: center;
+}
+
+.title-and-logo {
+    width: 100%;
+    height: 8rem;
+    gap: 3rem;
+}
+
+.title {
+    background-color: white;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+
+.title > img {
+    height: 6rem;
+}
+
+.user-logo {
+    height: 100%;
+    aspect-ratio: 1;
+    background-color: white;
+    border-radius: 50%;
+    padding: 1.5rem;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.user-logo img {
+    height: 5rem;
+    cursor: pointer;
+}
+
+.chat-history {
+    justify-content: start;
+    background-color: var(--primary);
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+    border-radius: 2rem;
+    height: 100%;
+    gap: 2rem;
+    overflow-y: scroll;
+    padding: 2rem 2rem;
+}
+
+.chat-message {
+    font-size: var(--fs-100);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.assistant-chat {
+    background-color: var(--primary-700);
+    color: var(--primary-300);
+    margin-right: 4rem;
+    position: relative;
+}
+
+.assistant-chat::before {
+    display: block;
+    position: absolute;
+    inset: 0;
+    left: -0.5rem;
+    content: '';
+    background-color: inherit;
+    height: 1rem;
+    width: 2rem;
+    border-radius: 100%;
+}
+
+.user-chat {
+    background-color: var(--primary-300);
+    color: var(--primary-700);
+    margin-left: 4rem;
+    position: relative;
+}
+
+.user-chat::before {
+    display: block;
+    position: absolute;
+    right: -0.5rem;
+    top: 0;
+    content: '';
+    background-color: inherit;
+    height: 1rem;
+    width: 2rem;
+    border-radius: 100%;
+}
+
+.chat-textarea {
+    background-color: var(--primary);
+    width: 100%;
+    border-radius: 2rem;
+    padding: 0.8rem 1rem;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.input-textarea {
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+    border-radius: var(--fs-300);
+    width: 85%;
+    padding: 1rem 2rem;
+    margin: auto 0;
+    font-size: var(--fs-100);
+    border: none;
+    overflow-y: scroll;
+    resize: none;
+}
+
+#user-input-area {
+    background-color: var(--primary-700);
+    color: var(--bg-primary);
+}
+
+.send-logo-wrapper {
+    height: 4rem;
+    aspect-ratio: 1;
+    background-color: var(--primary-700);
+    border-radius: 50%;
+    padding: 1rem;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: 0.25rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.send-logo-wrapper img {
+    height: var(--fs-200);
+}
+
+.user-logo {
+    position: relative;
+}
+
+.user-logo input[type="checkbox"] {
+    display: none;
+}
+
+.user-logo input[type="checkbox"]:checked ~ .options-list {
+    display: block;
+    opacity: 1;
+    z-index: 9999;
+}
+
+.options-list {
+    position: absolute;
+    display: none;
+    background-color: var(--bg-primary);
+    inset: 0;
+    animation-name: optionsList;
+    animation-duration: 0.1s;
+    animation-timing-function: linear;
+    transform: translateX(-90%) translateY(40%);
+    border-radius: 4rem;
+    font-size: var(--fs-400);
+    width: 32rem;
+    aspect-ratio: 2 / 3;
+}
+
+@keyframes optionsList {
+    from {
+        transform: translateY(40%);
+    } to {
+        transform: translateX(-90%) translateY(40%);
+    }
+}
+
+.options-list > ul {
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+    margin-top: auto;
+}
+
+.option {
+    display: block;
+    width: 80%;
+    padding: 0.5rem 0;
+    text-align: center;
+    background-color: #fcbfbf;
+    border-radius: 1rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.login-page form {
+    margin-top: 0.5rem;
+    padding: 1rem 2rem;
+    outline: solid 2px black;
+    border-radius: 1rem;
+}
+
+.login-page input {
+    background-color: transparent;
+}
+
+.toggle-buttons {
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.toggle-button {
+    border-radius: 5px;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+}
+
+.toggle-button > input[type="radio"] {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+.toggle-button > label {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+.toggle-button:has(> input[type="radio"]:checked) {
+    background-color: hsla(54, 100%, 71%, 1);
+}
+
+.form-login-signup > form {
+    gap: 2rem;
+}
+
+.form-login-signup > form > input {
+    padding: 1rem 2rem;
+}
+
+.sign-up-submit {
+    border: none;
+    cursor: pointer;
+    display: block;
+    padding: 1rem 2rem;
+    background-color: hsla(54, 100%, 71%, 1);
+    border-radius: 0.8rem;
+}
