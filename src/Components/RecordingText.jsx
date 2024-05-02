@@ -164,7 +164,7 @@ function RecordingText() {
                     user_id: userData.user_id,
                     context: transcript
                 }
-                fetch('http://localhost:8000/files/update_context', {
+                fetch('https://medibotb.onrender.com/files/update_context', {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"

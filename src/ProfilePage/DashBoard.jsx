@@ -16,7 +16,7 @@ function DashBoard () {
 
     useEffect(() => {
         try {
-            fetch('http://localhost:8000/chats/getAssistantResponse', {
+            fetch('https://medibotb.onrender.com/chats/getAssistantResponse', {
                 "method": 'POST',
                 "headers": {"Content-Type": "application/JSON"},
                 "body": JSON.stringify({

@@ -52,7 +52,7 @@ function LoginPage() {
                 uploadData['weight'] = parseInt(uploadData['weight'])
                 
                 setIsLoading(true)
-                fetch ('http://localhost:8000/users/signup', 
+                fetch ('https://medibotb.onrender.com/users/signup', 
                 {
                     "method": 'POST',
                     "headers": {"Content-Type": "application/JSON"},
@@ -83,7 +83,7 @@ function LoginPage() {
         if (!isLoading) {
             try {
                 setIsLoading(true)
-                fetch("http://localhost:8000/users/login", {
+                fetch("https://medibotb.onrender.com/users/login", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"

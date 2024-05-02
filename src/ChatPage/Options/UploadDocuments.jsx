@@ -21,7 +21,7 @@ function UploadDocuments() {
             setUploading(true)
             setState("Uploading")
             
-            fetch("http://localhost:8000/files/upload_pdf", {
+            fetch("https://medibotb.onrender.com/files/upload_pdf", {
                 "method": "POST",
                 "body": formData
             })
